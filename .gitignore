@@ -1,0 +1,11 @@
+.env
+vendor
+*.bcp
+*bak
+*backup
+*~
+node_modules
+
+pdf/mod
+pdf/origin
+pdf/front-pages/*-compat.pdf

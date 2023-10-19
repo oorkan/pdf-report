@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<ruleset name="PDF Report">
+    <description>PSR12 coding standard</description>
+    <arg name="extensions" value="php"/>
+    <rule ref="PSR12" />
+    <exclude-pattern>vendor</exclude-pattern>
+    <exclude-pattern>node_modules</exclude-pattern>
+    <file>.</file>
+</ruleset>

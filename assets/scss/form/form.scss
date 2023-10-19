@@ -1,0 +1,194 @@
+.text-center {
+    text-align: center;
+}
+
+.pdfr-form {
+    &-ctr {
+        width: 70%;
+        @media (max-width: 640px) {
+            width: 100%;
+        }
+
+        margin: 20px auto;
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .error {
+            font-size: 12px;
+            margin-top: 4px;
+        }
+
+        .text-danger {
+            color: #f56c6c;
+        }
+    }
+
+    &-group {
+        margin-bottom: 20px;
+    }
+
+    &-label {
+        display: inline-block;
+        margin-bottom: 5px;
+        position: relative;
+
+        &.el-required {
+            &.asterisk-right {
+                &:after {
+                    content: " *";
+                    color: #f56c6c;
+                    margin-left: 3px;
+                }
+            }
+        }
+
+        label {
+            display: inline-block;
+            font-weight: 600;
+            line-height: inherit;
+            margin-bottom: 0;
+        }
+    }
+
+    &-el {
+        &.is-error {
+            .pdfr-form-control {
+                border-color: #f56c6c;
+            }
+        }
+
+        label {
+            display: inline-flex;
+            align-items: center;
+
+            .pdfr-form-control[type=checkbox],
+            .pdfr-form-control[type=radio] {
+                margin-right: 10px;
+            }
+        }
+    }
+
+    &-control {
+        background-clip: padding-box;
+        background-image: none;
+        border: 1px solid #ced4da;
+        border-radius: 0.25rem;
+        color: #495057;
+        display: block;
+        font-size: 16px;
+        line-height: 1.5;
+        height: 45px;
+        margin-bottom: 0;
+        max-width: 100%;
+        padding: 6px 12px;
+        transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+        width: 100%;
+
+        &:focus {
+            background-color: #fff;
+            border-color: #80bdff;
+            color: #495057;
+            outline: none;
+        }
+    }
+
+    &-submit {
+        border: 1px solid transparent;
+        border-radius: 15px;
+        cursor: pointer;
+        display: inline-block;
+        font-family: 'Montserrat';
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 1.6;
+        position: relative;
+        text-align: center;
+        transition: background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+        vertical-align: middle;
+        white-space: nowrap;
+        background-color: #a47c54;
+        box-shadow: 0.5px 1px 1px 1px #4e1703;
+        text-transform: uppercase;
+        max-width: 350px;
+        width: 100%;
+        padding: 20px 0;
+        color: #ffffff;
+
+        &:hover {
+            background-image: linear-gradient(#8e6c4a, #8e6c4a);
+        }
+
+        // &:hover {
+        //     opacity: .8;
+        //     outline: 0;
+        //     text-decoration: none;
+        // }
+    }
+}
+
+.pdfr-form-group {
+    &-inner {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        @media (max-width: 480px) {
+            // flex-direction: column;
+        }
+
+        &.max-640 {
+            max-width: 640px;
+        }
+
+        .pdfr-form-el {
+            flex: 1;
+        }
+    }
+}
+
+#pdfr-form-input-birthtime-resolver-label,
+#pdfr-form-input-sbirthtime-resolver-label {
+    color: #a47c54;
+}
+
+#pdfr-form-input-birthtime-resolver,
+#pdfr-form-input-sbirthtime-resolver {
+    font-size: 12px;
+    padding: 2px 4px;
+    position: relative;
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+
+
+    &, &::before {
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+    }
+
+    &::before {
+        content: '';
+        border: 1px solid #a47c54;
+        background-color: #fff;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &:checked {
+        &::before {
+            border: solid 1px #a47c54;
+            padding: 2px;
+            background-clip: content-box;
+            background-color: #a47c54;
+        }
+    }
+}
